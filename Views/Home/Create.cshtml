@@ -1,0 +1,30 @@
+﻿@model ProductStore.Data.Models.Product
+<h2>Добавление продукта</h2>
+<form asp-action="create" asp-controller="home">
+    <p>
+        <label asp-for="ProductsName">Название продукта</label><br />
+        <input type="text" asp-for="ProductsName" />
+    </p>
+    <p>
+        <label asp-for="Desc">Описание</label><br />
+        <input type="text" asp-for="Desc" />
+    </p>
+    <p>
+        <label asp-for="Price">Цена</label><br />
+        <input type="number" asp-for="Price" />
+    </p>
+    <p>
+        
+        <label asp-for="Stores">Магазин</label><br />
+        <input type="text" name="TitleName" list="Stores">
+             <datalist id="Stores">
+                <option value="Ницца" />
+                <option value="Пятачок"/>
+             </datalist>
+    </p>
+
+
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form>
