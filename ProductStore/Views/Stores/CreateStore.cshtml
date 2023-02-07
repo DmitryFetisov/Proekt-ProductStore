@@ -1,0 +1,24 @@
+﻿@model ProductStore.Data.Models.Store
+<h2>Добавление магазина</h2>
+<form asp-action="createstore" asp-controller="stores">
+    <p>
+        <label asp-for="TitleName">Название магазина</label><br />
+        <input type="text" asp-for="TitleName" />
+    </p>
+    <p>
+        <label asp-for="Adress">Местоположение</label><br />
+        <input type="text" asp-for="Adress" />
+    </p>
+    <p>
+        
+        <label asp-for="Products">Продукты</label><br />
+        <input type="text" name="ProductsName" list="Products">
+             <datalist id="Products">
+                <option value="Ананас" />
+                <option value="Туалетная бумага"/>
+             </datalist>
+    </p>
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form>

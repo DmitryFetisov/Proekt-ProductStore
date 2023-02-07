@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<Doctype html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/" _msttexthash="1183130" _msthash="1">Главная страница</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" _msthidden="A" _mstaria-label="320099" _msthash="2">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Stores/Grocery" _msttexthash="634504" _msthash="4">Магазины</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="/ShopCart/" _msttexthash="3271372" _msthash="5">Заказы</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Искать" aria-label="Искать" _mstplaceholder="74607" _msthash="6" _mstaria-label="74607">
+                            <button class="btn btn-outline-success" type="submit" _msttexthash="802048" _msthash="7">Искать</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    <div class="container mt-5">
+        @RenderBody()
+    </div>
+    <footer class="container">
+            <p class="float-end"><a href="#" _msttexthash="799071" _msthash="55">Наверх</a></p>
+            <p _msttexthash="19229444" _msthash="56">© 2017–2023 Компания, Inc. · <a href="#" _istranslated="1">Конфиденциальность</a> · <a href="#" _istranslated="1">Условия</a></p>
+    </footer>
+
+</body>
+</html>

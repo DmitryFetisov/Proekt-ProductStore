@@ -1,0 +1,8 @@
+﻿@model IEnumerable<ProductStore.Data.Models.ShopCart>
+<div class="container">
+    @foreach(ShopCart shopCart in Model){
+        @Html.Partial("Shopping",shopCart)
+    }
+    <hr />
+    <div class="btn btn-danger" asp-controller = "Order"> Оплатить </div>>
+</div>

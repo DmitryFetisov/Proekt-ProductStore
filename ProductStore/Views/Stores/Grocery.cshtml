@@ -1,0 +1,12 @@
+﻿@model IEnumerable<ProductStore.Data.Models.Store>
+<h1>Магазин</h1>
+<p><a asp-action="CreateStore">Добавить магазин</a></p>
+<table class="table">
+    @{
+
+        foreach (Store store in Model)
+        {
+            @Html.Partial("Stores",store)
+        }
+    }
+</table>
