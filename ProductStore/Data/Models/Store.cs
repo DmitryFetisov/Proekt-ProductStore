@@ -14,6 +14,5 @@
         {
             Products = new List<Product>();
         }
-
     }
 }

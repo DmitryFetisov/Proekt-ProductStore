@@ -11,17 +11,20 @@ namespace ProductStore.Controllers
     {
         private readonly IAllProducts productint;
         private readonly ShopCart shopCart;
+
         public ShopCartController(IAllProducts productint, ShopCart shopCart)
         {
             this.productint = productint;
             this.shopCart = shopCart;
         }
+
         public ViewResult Index()
         {
             var items = shopCart.GetShoppingCarts();
             shopCart.listShopingcart = items;
             return View(items);
         }
+
         public RedirectToActionResult addToCart(int id)
         {
             var item = productint.Products.FirstOrDefault(x => x.Id == id);

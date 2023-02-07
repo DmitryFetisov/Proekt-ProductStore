@@ -15,6 +15,7 @@ namespace ProductStore
         {
             _config = new ConfigurationBuilder().SetBasePath(hostEnv.ContentRootPath).AddJsonFile("./dbsettings.json").Build();
         }
+
         //Подключаем сервисы
         public void ConfigureServices(IServiceCollection services)
         {

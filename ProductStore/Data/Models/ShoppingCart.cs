@@ -3,6 +3,7 @@
     public class ShoppingCart
     {
         public int cartId { get; set; }
+
         public Product? Product { get; set; }
 
         public ushort Price { get; set; }

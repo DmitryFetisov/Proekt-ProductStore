@@ -26,6 +26,7 @@ namespace ProductStore.Controllers
         {
             return View();
         }
+
         public ActionResult Details(int id = 0)
         {
             Product product = context.Products.Find(id);
@@ -33,8 +34,10 @@ namespace ProductStore.Controllers
             {
                 return NotFound();
             }
+
             return View(product);
         }
+
         public async Task<IActionResult> Index()
         {
             ViewBag.Title = "Страница с продуктами";
@@ -61,6 +64,7 @@ namespace ProductStore.Controllers
                 await context.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
+
             return NotFound();
         }
 
@@ -71,8 +75,10 @@ namespace ProductStore.Controllers
                 Product? product = await context.Products.FirstOrDefaultAsync(p => p.Id == id);
                 if (product != null) return View(product);
             }
+
             return NotFound();
         }
+
         [HttpPost]
         public async Task<IActionResult> Edit(Product product)
         {

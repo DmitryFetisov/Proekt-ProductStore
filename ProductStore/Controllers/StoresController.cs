@@ -14,7 +14,6 @@ namespace ProductStore.Controllers
 
         public StoresController(AppDBContext db)
         {
-            
             context = db;
         }
 
@@ -48,6 +47,7 @@ namespace ProductStore.Controllers
                 await context.SaveChangesAsync();
                 return RedirectToAction("Grocery");
             }
+
             return NotFound();
         }
 
@@ -58,8 +58,10 @@ namespace ProductStore.Controllers
                 Store? store = await context.Stores.FirstOrDefaultAsync(p => p.StoreId == storeid);
                 if (store != null) return View(store);
             }
+
             return NotFound();
         }
+
         [HttpPost]
         public async Task<IActionResult> EditStore(Store store)
         {
@@ -67,7 +69,6 @@ namespace ProductStore.Controllers
             await context.SaveChangesAsync();
             return RedirectToAction("Grocery");
         }
-
     }
 }
     
